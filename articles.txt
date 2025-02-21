@@ -1,0 +1,24 @@
+https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/
+https://dev.to/sre_panchanan/how-to-dockerize-a-flask-application-4mi
+https://habr.com/ru/companies/ruvds/articles/450312/
+https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/
+
+
+
+Просмотр активных соединенией в контейнере:
+sudo docker inspect -f '{{.State.Pid}}' name_container
+sudo nsenter -t PID -n netstat
+
+Сборка и запуск контейнера:
+sudo docker build -t flaskapp .
+sudo docker run -d -p 8080:8080 flaskapp
+
+html шаблоны должны хранится в папке проекта templates
+
+Не забывать обновлять зависимости в requirements, если добавляются новые
+
+SQLAlchemy как хороший тон
+
+Сеть в виртуальной машине в режиме: Виртуальный адаптер хоста
+
+Пароли и логины хранить в файле окружения (.env)

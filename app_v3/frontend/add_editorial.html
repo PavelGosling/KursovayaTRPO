@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить редакцию</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Добавить редакцию</h1>
+    
+    <form action="/add_editorial" method="post" class="container">
+        <label for="edition_title">Название издания:</label>
+        <input type="text" id="edition_title" name="edition_title" required><br>
+        <label for="address">Адрес организации:</label>
+        <input type="text" id="address" name="address" required><br>
+        <label for="editor_in_chief">Фамилия главного редактора:</label>
+        <input type="text" id="editor_in_chief" name="editor_in_chief" required><br>
+        <button type="submit">Добавить редакцию</button>
+        <a href="/" class="button">На главную</a>
+        {% if message %}
+        <div class="message">{{ message }}</div>
+        {% endif %}
+    </form>
+</body>
+</html>

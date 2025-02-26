@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    color: #FFFF;
+}
+
+.container {
+    max-width: auto;
+    margin: 20px auto;
+    margin-left: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #0056b3; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  padding: 10px 15px; /* Внутренние отступы кнопки */
+  border: none; /* Убирает обводку кнопки */
+  border-radius: 4px; /* Скругление углов кнопки */
+  cursor: pointer; /* Меняет курсор на "руку" при наведении */
+  margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #003366; /* Темно-синий цвет фона кнопки при наведении */
+}
+
+.button-container {
+    display: flex; /* Используем flexbox для горизонтального выравнивания */
+    justify-content: space-between; /* Распределяем пространство между кнопками */
+    margin: 20px 0; /* Добавляем небольшой отступ сверху и снизу */
+    padding: 0 10px; /* Добавляем небольшой отступ слева и справа */
+    margin-left: 10px;
+}
+  
+.button {
+    flex: 1; /* Заставляем кнопки занимать равное пространство */
+    text-align: center; /* Выравниваем текст по центру внутри кнопки */
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: #0056b3; /* Синий цвет фона */
+    color: white; /* Белый цвет текста */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Добавляем анимацию при наведении */
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+}
+  
+.button:hover {
+    background-color: #003366; /* Темно-синий цвет при наведении */
+}
+  
+/* Для адаптивности на маленьких экранах */
+@media (max-width: 768px) {
+    .button-container {
+      flex-direction: column; /* Выравниваем кнопки в столбик на маленьких экранах */
+      align-items: center; /* Центрируем кнопки по горизонтали */
+    }
+  
+    .button {
+      width: 90%; /* Занимают 90% ширины контейнера на маленьких экранах */
+      margin: 5px 0;
+    }
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
